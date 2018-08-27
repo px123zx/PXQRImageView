@@ -24,4 +24,4 @@ qrView.setBackImg(UIImage(named: "q")!)
 qrView.backImgScale = 1
 ``` 
 ### 效果图
-![-w230](media/15353326060072/15353337529337.jpg)
+![效果图](https://github.com/px123zx/PXQRImageView/blob/master/1111.png)
