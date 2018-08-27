@@ -22,8 +22,17 @@ class PXQRImageVIew: UIImageView {
         }
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: frame.width))
+    }
     
     
+    /// 初始化
+    ///
+    /// - Parameters:
+    ///   - frame: 二维码位置， 宽高需要一样、不一样是以宽度为准
+    ///   - qrStr: 二维码信息
+    ///   - backImg: 背景或logo图
     convenience init(frame: CGRect, qrStr: String, backImg: UIImage?) {
         self.init(frame: frame)
         QRImg = generateCode(inputMsg: qrStr)
@@ -41,6 +50,10 @@ class PXQRImageVIew: UIImageView {
             self.addSubview(backImgeView!)
             backImgeView?.layer.mask = maskLayer
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     //设置二维码图
