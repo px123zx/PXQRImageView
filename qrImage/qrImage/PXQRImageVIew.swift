@@ -43,12 +43,9 @@ class PXQRImageVIew: UIImageView {
             maskLayer.contents = maskImg
             maskLayer.frame = self.bounds
             
-            backImgeView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width * backImgScale, height: self.bounds.width * backImgScale))
-            backImgeView?.center = CGPoint(x: self.bounds.width/2, y: self.bounds.width/2)
-            backImgeView?.image = backImg
-            backImgeView?.backgroundColor = UIColor.black
-            self.addSubview(backImgeView!)
-            backImgeView?.layer.mask = maskLayer
+            self.image = backImg
+            self.backgroundColor = UIColor.black
+            self.layer.mask = maskLayer
         }
     }
     
